@@ -1,0 +1,503 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto' rel='stylesheet'>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        table, td, th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th, td {
+            padding: 15px;
+        }
+
+        .heading {
+            border: 0px;
+            padding: 0px;
+            float: left;
+            width: 100%;
+            background-color: rgb(243, 243, 243);;
+            color: rgb(250, 7, 7);
+            font-family: 'Roboto'
+        }
+
+        .text {
+            font-family: 'Roboto'
+        }
+    </style>
+</head>
+<body>
+
+    <center>
+        <div class="heading">
+            <h1>Singapore Airbnb Data</h1>
+        </div>
+    </center>
+
+    <br>
+
+    <table>
+        <tr>
+            <td style="background-color:rgb(243, 243, 243);">
+                <h2 class="text">4)1. Total number of rentals that are available 365 days a year, and the total number of
+                    rentals.(As numbers)
+                    </h2>
+                <p class="text"> Rentals that are available 365 days a year = 843 </p>
+                <p class="text"> Total number of Rentals                   = 7921 </p>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color: rgb(243, 243, 243);">
+                <h2 class="text">4)2. Number of rentals per neighbourhood_group (As a bar chart)</h2>
+                <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+                <div id="chart_div1"></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(243, 243, 243);">
+                <h2 class="text">4)3. Average price of Private room rental by neighbourhood_group (As a bar chart)</h2>
+                <div id="chart_div2"></div>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(243, 243, 243);">
+                <h2 class="text">4)4. Top 10 neighbourhood based on Average price of Private room (As a table)</h2>
+                <br>
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Neighbourhood group</th>
+                        <th>Neighbourhood</th>
+                        <th>Average price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Central Region</td>
+                        <td>Southern Islands</td>
+                        <td>649.67</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Central Region</td>
+                        <td>Marina South</td>
+                        <td>419.0</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>West Region</td>
+                        <td>Bukit Panjang</td>
+                        <td>409.45</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>West Region</td>
+                        <td>Jurong East</td>
+                        <td>182.26</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>Central Region</td>
+                        <td>Downtown Core</td>
+                        <td>163.50</td>
+                    </tr>
+                    <tr>
+                        <td>6</td>
+                        <td>Central Region</td>
+                        <td>Singapore River</td>
+                        <td>150.67</td>
+                    </tr>
+                    <tr>
+                        <td>7</td>
+                        <td>Central Region</td>
+                        <td>Orchard</td>
+                        <td>146.90</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>Central Region</td>
+                        <td>Toa Payoh</td>
+                        <td>142.78</td>
+                    </tr>
+                    <tr>
+                        <td>9</td>
+                        <td>Central Region</td>
+                        <td>Bishan</td>
+                        <td>138.92</td>
+                    </tr>
+                    <tr>
+                        <td>10</td>
+                        <td>Central Region</td>
+                        <td>Outram</td>
+                        <td>135.27</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(243, 243, 243);">
+                <h2 class="text">4)5. The 5 lowest price rentals per each room_type (As a table)</h2>
+                <br>
+                <h3 class="text">Private Room</h3>
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>id</th>
+                        <th>host id</th>
+                        <th>host name</th>
+                        <th>Neighbourhood group</th>
+                        <th>Neighbourhood</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>18679631</td>
+                        <td>108408404</td>
+                        <td>Sutthida</td>
+                        <td>Central Region</td>
+                        <td>Marine Parade</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>21926382</td>
+                        <td>45343820</td>
+                        <td>Deqing</td>
+                        <td>East Region</td>
+                        <td>Tampines</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>33324090</td>
+                        <td>13503463</td>
+                        <td>Angelina</td>
+                        <td>West Region</td>
+                        <td>Jurong West</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>10318835</td>
+                        <td>13460992</td>
+                        <td>Ming</td>
+                        <td>Central Region</td>
+                        <td>Geylang</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>24883645</td>
+                        <td>14021375</td>
+                        <td>Marc</td>
+                        <td>Central Region</td>
+                        <td>Outram</td>
+                        <td>15</td>
+                    </tr>
+                </table>
+                <br>
+                <h3 class="text">Entire home/apt</h3>
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>id</th>
+                        <th>host id</th>
+                        <th>host name</th>
+                        <th>Neighbourhood group</th>
+                        <th>Neighbourhood</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>21408571</td>
+                        <td>114674497</td>
+                        <td>Mitul</td>
+                        <td>Central Region</td>
+                        <td>Rochor</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>37506711</td>
+                        <td>29799617</td>
+                        <td>John</td>
+                        <td>Central Region</td>
+                        <td>Geylang</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>35947264</td>
+                        <td>75175440</td>
+                        <td>Rain</td>
+                        <td>West Region</td>
+                        <td>Bukit Panjang</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>16381367</td>
+                        <td>26246420</td>
+                        <td>Jordan</td>
+                        <td>Central Region</td>
+                        <td>Bukit Timah</td>
+                        <td>31</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>36761101</td>
+                        <td>73254645</td>
+                        <td>Jennifer</td>
+                        <td>North Region</td>
+                        <td>Yishun</td>
+                        <td>39</td>
+                    </tr>
+                </table>
+                <br>
+                <h3 class="text">Shared room</h3>
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>id</th>
+                        <th>host id</th>
+                        <th>host name</th>
+                        <th>Neighbourhood group</th>
+                        <th>Neighbourhood</th>
+                        <th>Price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>18656726</td>
+                        <td>21900076</td>
+                        <td>Mary</td>
+                        <td>East Region</td>
+                        <td>Bedok</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>22034488</td>
+                        <td>160839396</td>
+                        <td>Bi</td>
+                        <td>West Region</td>
+                        <td>Jurong West</td>
+                        <td>15</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>26170424</td>
+                        <td>196709892</td>
+                        <td>Anna</td>
+                        <td>Central Region</td>
+                        <td>Rochor</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>10040828</td>
+                        <td>46545593</td>
+                        <td>Meadows</td>
+                        <td>Central Region</td>
+                        <td>Kallang</td>
+                        <td>18</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>20839977</td>
+                        <td>63448912</td>
+                        <td>River City Inn</td>
+                        <td>Central Region</td>
+                        <td>Singapore River</td>
+                        <td>19</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(243, 243, 243);">
+                <h2 class="text">4)6. Percentage of owners who rent more than one property (As a pie chart)</h2>
+                <center><div id="chart_div3" style="width: 900px; height: 500px;"></div></center>
+            </td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(243, 243, 243);">
+                <h2 class="text">4)7. Histogram of number of rentals reviewed over time (based on last_review) in mouth
+                    granularity (As a bar chart)
+                    </h2>
+                <center><div id="chart_div4" style="width: 900px; height: 500px;"></div></center>
+        </td>
+        </tr>
+        <tr>
+            <td style="background-color:rgb(243, 243, 243);">
+                <h2 class="text">4)8. Number of rentals that are available all 365 days of the year for each neighbourhood,
+                    that are in the neighbourhood which have top 5 average rental prices (As a table)
+                    </h2>
+                <br>
+                <table>
+                    <tr>
+                        <th>No.</th>
+                        <th>Neighbourhood group</th>
+                        <th>Neighbourhood</th>
+                        <th>Average price</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>West Region</td>
+                        <td>Western Water Catchment</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>West Region</td>
+                        <td>Bukit Panjang</td>
+                        <td>1</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>North Region</td>
+                        <td>Woodlands</td>
+                        <td>12</td>
+                    </tr>
+                    <tr>
+                        <td>4</td>
+                        <td>North-East Region</td>
+                        <td>Serangoon</td>
+                        <td>8</td>
+                    </tr>
+                    <tr>
+                        <td>5</td>
+                        <td>North Region</td>
+                        <td>Lim Chu Kang</td>
+                        <td>1</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        google.charts.load('current', { packages: ['corechart', 'bar'] });
+        google.charts.setOnLoadCallback(drawBasic);
+
+        function drawBasic() {
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            var data1 = google.visualization.arrayToDataTable([
+                ['Neighbourhood_group', 'Number of rentals',],
+                ['Central Region', 6301],
+                ['West Region', 539],
+                ['East Region', 508],
+                ['North-East Region', 344],
+                ['North Region', 203]
+
+
+            ]);
+
+            var options1 = {
+                title: 'Number of rentals per neighbourhood_group',
+                chartArea: { width: '50%' },
+                hAxis: {
+                    title: 'Number of rentals',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'Group'
+                }
+            };
+
+            var chart1 = new google.visualization.BarChart(document.getElementById('chart_div1'));
+
+            chart1.draw(data1, options1);
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            var data2 = google.visualization.arrayToDataTable([
+                ['Neighbourhood_group', 'Average price for Private room',],
+                ['West Region', 117.83],
+                ['East Region', 117.23],
+                ['Central Region', 114.47],
+                ['North Region', 82.35],
+                ['North-East Region', 80.06]
+
+            ]);
+
+            var options2 = {
+                title: 'Average price for Private room rental by neighbourhood_group',
+                chartArea: { width: '50%' },
+                hAxis: {
+                    title: 'Average price for Private room rental',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'Group'
+                }
+            };
+
+            var chart2 = new google.visualization.BarChart(document.getElementById('chart_div2'));
+
+            chart2.draw(data2, options2);
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            var data3 = google.visualization.arrayToDataTable([
+                ['Owner Group', 'Percentage'],
+                ['Rented only one property', 27.3],
+                ['Rented more than one property', 72.7]
+            ]);
+
+            var options3 = {
+                title: 'Owners who rent more than one property'
+            };
+
+            var chart3 = new google.visualization.PieChart(document.getElementById('chart_div3'));
+
+            chart3.draw(data3, options3);
+
+            ////////////////////////////////////////////////////////////////////////////////////////////////////
+            var data4 = google.visualization.arrayToDataTable([
+                ['Month', 'Number of rentals',],
+                ['January', 241],
+                ['February', 236],
+                ['March', 235],
+                ['April', 249],
+                ['May', 334],
+                ['June', 454],
+                ['July', 983],
+                ['August', 1821],
+                ['September', 149],
+                ['October', 125],
+                ['November', 111],
+                ['December', 201]
+            ]);
+
+            var options4 = {
+                title: 'Number of rentals reviewed over time (based on last_review) in month granularity',
+                chartArea: {
+                    width: '50%'
+                },
+                hAxis: {
+                    title: 'Number of rentals',
+                    minValue: 0
+                },
+                vAxis: {
+                    title: 'Month'
+                }
+            };
+
+            var chart4 = new google.visualization.BarChart(document.getElementById('chart_div4'));
+
+            chart4.draw(data4, options4);
+        }
+    </script>
+
+</body>
+</html>

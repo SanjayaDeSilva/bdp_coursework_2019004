@@ -1,0 +1,46 @@
+sudo docker run -p 8088:8088 -p 50070:50070 -v /home/sanjaya/Dev/MSc/BDP:/resources --name hadoop-hive-pig -d suhothayan/hadoop-hive-pig:2.7.1
+sudo docker exec -it hadoop-hive-pig bash
+hdfs dfsadmin -safemode leave
+hdfs dfs -mkdir /externaltablenew
+cd resources/
+hdfs dfs -put listings.csv /externaltablenew
+hive
+
+create external table dbpdata(
+id int,
+name string,
+host_id string,
+host_name string,
+neighbourhood_group string,
+neighbourhood string,
+latitude string,
+longitude string,
+room_type string,
+price string,
+minimum_nights string,
+number_of_reviews string,
+last_review string,
+reviews_per_month string,
+calculated_host_listings_count string,
+availability_365 string
+)row format delimited fields terminated by ',' LOCATION '/externaltablenew/';
+
+
+2.1 ) select neighbourhood_group,avg(cast(price as float)) price_ from dbpdata where room_type='Private room' group by neighbourhood_group;
+2.2 ) select neighbourhood ,avg(cast(price as float)) price_ from dbpdata where room_type='Private room' group by neighbourhood order by  price_ desc limit 10;
+2.3 ) select host_id,host_name , cast(price as float) price_ from dbpdata where room_type='Private room' order by  price_ desc limit 5;
+select host_id,host_name , cast(price as float) price_ from dbpdata where room_type='Shared room' order by  price_ desc limit 5;
+select host_id,host_name , cast(price as float) price_ from dbpdata where room_type='Entire home/apt' order by  price_ desc limit 5;
+
+//Zeppelin
+sudo docker run -p 8080:8080 -p 40060:40060 -v /home/sanjaya/Dev/MSc/BDP:/data --name zeppelin  -d apache/zeppelin:0.8.1
+  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
+	  
