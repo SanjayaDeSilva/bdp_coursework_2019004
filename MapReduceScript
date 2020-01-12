@@ -1,0 +1,9 @@
+
+sudo docker run -p 8088:8088 -p 50070:50070 -v /home/sanjaya/Dev/MSc/BDP:/resource --name hadoop-hive-pig -d suhothayan/hadoop-hive-pig:2.7.1
+sudo docker exec -it hadoop-hive-pig bash
+hdfs dfs -put /resource/booking-0.0.1-SNAPSHOT.jar /resource
+hdfs dfs -put /resource/listings.csv /resource
+cd resource/
+yarn jar booking-0.0.1-SNAPSHOT.jar com.example.map.Available365 listings.csv output/wordCount1n
+yarn jar booking-0.0.1-SNAPSHOT.jar com.example.map.TotalRentals listings.csv output/wordCount1n
+
